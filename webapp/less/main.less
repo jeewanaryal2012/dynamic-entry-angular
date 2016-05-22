@@ -1,0 +1,48 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+@BORDER_COLOR: #c0c0c0;
+@TH_COLOR: #5DB0E1;
+@TD_COLOR: #A6A6A6;
+
+body {
+  margin: 4em auto;
+}
+
+#main-wrapper {
+  width: 80%;
+  margin: 1em auto;
+  .float-right{
+    float: right;
+  }
+}
+
+.row-box {
+  margin: 15px;
+}
+
+table {
+  border: 1px solid @BORDER_COLOR;
+  tr th {
+    color: @TH_COLOR;
+    font-family: 'Roboto';
+  }
+  tr td {
+    color: @TD_COLOR;
+    font-weight: normal;
+  }
+  .delete-btn {
+    color: #d9534f;
+    cursor: pointer;
+  }
+}
+
+form {
+  border: 1px solid @BORDER_COLOR;
+  float: left;
+  width: 100%;
+  padding: 15px;
+  .full-width {
+    width: 100%;
+  }
+}

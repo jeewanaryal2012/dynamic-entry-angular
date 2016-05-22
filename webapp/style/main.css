@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+body {
+  margin: 4em auto;
+}
+#main-wrapper {
+  width: 80%;
+  margin: 1em auto;
+}
+#main-wrapper .float-right {
+  float: right;
+}
+.row-box {
+  margin: 15px;
+}
+table {
+  border: 1px solid #c0c0c0;
+}
+table tr th {
+  color: #5db0e1;
+  font-family: 'Roboto';
+}
+table tr td {
+  color: #a6a6a6;
+  font-weight: normal;
+}
+table .delete-btn {
+  color: #d9534f;
+  cursor: pointer;
+}
+form {
+  border: 1px solid #c0c0c0;
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+form .full-width {
+  width: 100%;
+}

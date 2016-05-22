@@ -1,0 +1,25 @@
+[{
+  "type": "Developer",
+  "name": "Ryan",
+  "title": "PHP Developer",
+  "phone": "123-456-7890",
+  "ext": "1234",
+  "fax": "123-456-7890",
+  "email": "ryan@abc.com"
+}, {
+  "type": "Jr. Developer",
+  "name": "Chris",
+  "title": "Java Developer",
+  "phone": "123-456-7890",
+  "ext": "1234",
+  "fax": "123-456-7890",
+  "email": "chris@abc.com"
+}, {
+  "type": "Sr. Developer",
+  "name": "Bob",
+  "title": "UI Developer",
+  "phone": "123-456-7890",
+  "ext": "1234",
+  "fax": "123-456-7890",
+  "email": "bob@abc.com"
+}]

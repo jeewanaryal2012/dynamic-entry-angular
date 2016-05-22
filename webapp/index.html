@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Title of the document</title>
+
+            <link rel="stylesheet" type="text/css" href="style/main.css">
+            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+            <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+            <script src="../node_modules/angular/angular.js"></script>
+            <script src="../node_modules/ngstorage/ngStorage.min.js"></script>
+
+
+            <script src="js/main.js"></script>
+            <script src="js/controller/main-controller.js"></script>
+        </head>
+
+        <body ng-app="app" ng-controller="main-controller">
+            <div id="main-wrapper">
+                <div class="row row-box">
+                    <div class="float-right col-lg-2 col-md-2 col-sm-2">
+                        <button type="button" class="btn btn-primary btn-xs"
+                                ng-click="showForm();" ng-hide="show==true">
+                            Add More Entry <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="row row-box">
+                    <form ng-show="show==true">
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputType">Type</label>
+                            <input type="text" class="form-control" id="inputType" placeholder="Type" ng-model="formData.type">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="formData.name">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputTitle">Title</label>
+                            <input type="text" class="form-control" id="inputTitle" placeholder="Title" ng-model="formData.title">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputPhone">Phone</label>
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone" ng-model="formData.phone">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputExt">Ext.</label>
+                            <input type="text" class="form-control" id="inputExt" placeholder="Ext" ng-model="formData.ext">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputFax">Fax</label>
+                            <input type="text" class="form-control" id="inputFax" placeholder="Fax" ng-model="formData.fax">
+                        </div>
+                        <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="formData.email">
+                        </div>
+                        <div class="form-group col-lg-10 col-md-10 col-sm-10">
+                            <button type="button" class="full-width btn btn-primary btn-sm" ng-click="submitForm()">Submit</button>
+                        </div>
+                        <div class="form-group col-lg-2 col-md-2 col-sm-2">
+                            <button type="button" class="btn btn-danger btn-sm" ng-click="closeForm()">Close Form</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="row row-box">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="delete-btn"><i class="fa fa-trash" aria-hidden="true" ng-show="showDelete" ng-click="deleteClicked()"></i></th>
+                                    <th>Type</th>
+                                    <th>Name</th>
+                                    <th>Title</th>
+                                    <th>Phone</th>
+                                    <th>Ext.</th>
+                                    <th>Fax</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="i in arr track by $index">
+                                    <th scope="row"><input type="checkbox" ng-model="i.checked" ng-click="checkboxClicked($index, arr)"></th>
+                                    <td>{{i.type}}</td>
+                                    <td>{{i.name}}</td>
+                                    <td>{{i.title}}</td>
+                                    <td>{{i.phone}}</td>
+                                    <td>{{i.ext}}</td>
+                                    <td>{{i.fax}}</td>
+                                    <td>{{i.email}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </body>
+
+    </html>
